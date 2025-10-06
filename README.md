@@ -3,7 +3,9 @@ CS4348 Project 1 Spring 2025
 Project 1
 Due: Friday, October 17th 11:59pm
 ___________________________________________________________________________________________________
+
 Description
+
 The project will be implemented as three separate programs. There will be a logger – responsible
 for logging all activity. There will be an encryption program – responsible for encrypting and
 decrypting strings. There will be a driver program that will interact with the user to use the
@@ -17,7 +19,10 @@ ________________________________________________________________________________
 
 Details
 
+----------------------------------------------------------------------------------------------------------------
+
 Logger
+
 The logger will write log messages to a log file. The log messages are lines of text where the
 first sequence of non-whitespace characters is considered the action, and the rest of the line is
 considered the message. The log message will be recorded, with a time stamp in 24 hour notation,
@@ -38,21 +43,29 @@ word (sequence of non-whitespace characters) should be treated as a command, and
 the line(after the first space) as the argument for that command. Output is printed to standard
 out as a line of text where the first word is a response type. The currently set key is remembered
 by the encryption program. The encryption program should handle the following commands.
+
 PASS Sets the current passkey to use when encrypting or decrypting.
+
 ENCRYPT Using a Vigenère cypher with the current passkey, encrypt the argument and output
 the result. If no passkey is set output an error.
+
 DECRYPT Using a Vigenère cypher with the current passkey, decrypt the argument and output
 the result. If no passkey is set output an error.
+
 QUIT Exit the program.
 The encryption program has the following response types.
+
 RESULT The preceding command succeeded. The rest of the line (after a space) is the result of
 the executed command.
+
 ERROR The preceding command failed. The rest of the line (after a space) is the error message.
+
 More information on the Vigenère cypher can be found at the following url.
 https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 The Vigenère cypher only works on letters, and is case insensitive. Since the encryption program
 is the backend, you may assume correct input of only one case. For instance, you may assume
 that it always receive input in uppercase.
+
 Example Interaction
 Below is a single run of the encryption program.
 • Input: ENCRYPT HELLO
